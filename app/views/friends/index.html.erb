@@ -1,0 +1,51 @@
+<% if user_signed_in? %>
+  <h1>Friend List</h1>
+
+  <table class="table table-striped table-hover table-bordered" id="friends">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Twitter</th>
+        <th>User ID</th>
+        <th></th>
+      </tr>
+    </thead>
+  <tbody>
+    <% @friends.each do |friend| %>
+      <% if friend.user == current_user%>
+      <tr>
+        <td>
+          <%= link_to friend.first_name + ' ' + friend.last_name, friend %> 
+        </td>     
+        <td>
+          <%= friend.email %> 
+        </td>
+        <td>
+          <%= friend.phone %> 
+        </td>    
+        <td>
+          <%= friend.twitter %> 
+        </td>
+        <td>
+          <%= friend.user_id %> 
+        </td>  
+        <td>
+          <%= button_to "Delete", friend, method: :delete, class: "btn btn-danger btn-sm",data: {turbo_confirm: "Are you sure?"} %>
+        </td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+
+
+  </table>
+
+
+
+  <%= link_to "New friend", new_friend_path, class:"btn btn-secondary"%>
+<% else %>
+<h1>Welcome To The Friends App!</h1>
+<h5>Please sign up or log in to continue :)</h5>
+<% end %>
