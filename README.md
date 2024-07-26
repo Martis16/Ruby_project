@@ -5,6 +5,7 @@
 A website where you can login and add, remove, delete, read, friends from your friends list.
 
 # Stack:
+* Ruby version: 3.2.3
 * Ruby on rails
 * Bootstrap
 
