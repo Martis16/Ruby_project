@@ -15,8 +15,7 @@ A website where you can login and add, remove, delete, read, friends from your f
 
 ![image](https://github.com/user-attachments/assets/bb7f7fe2-5eb5-4b27-961a-d03c91bc4aa0)
 
-2. Go to your folder. **Folder path may be differet on your PC
-**
+2. Go to your folder. **Folder path may be differet on your PC**
 ![image](https://github.com/user-attachments/assets/5bc53f40-defd-478f-900a-232314bb575c)
 
 3. Type Rails S
